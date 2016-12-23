@@ -1,0 +1,9 @@
+CPAN:Module::Build
+Perl-Test-MockModule 0.1
+Perl-Archive-Zip 1.59
+Doxygen 1.8.12
+ZIP
+GStreamer >= 1.10.2
+GST-Plugins-Base >= 1.10.2
+Apache-Ant >= 1.9.7
+

@@ -1,4 +1,4 @@
-# Recipes
+# Recetario
 Gobolinux recipes that are not pushed upstream, mostly work in progress.
 
 # How to use

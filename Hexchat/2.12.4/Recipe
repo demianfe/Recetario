@@ -1,0 +1,12 @@
+# Recipe (MakeRecipe) for Hexchat by Demian Florentin <demianflorentin@gmail.com>, on Thu Dec 22 21:35:31 PYST 2016
+# Recipe for version 2.12.4 by Demian Florentin <demianflorentin@gmail.com>, on Thu Dec 22 21:35:31 PYST 2016
+compile_version=016
+url="https://dl.hexchat.net/hexchat/hexchat-2.12.4.tar.xz"
+file_size=1451468
+file_md5=8f1ac351752d149a98aa3a77d40e1f7c
+dir='hexchat-2.12.4'
+recipe_type=configure
+
+configure_options=(
+	"--disable-lua" #for some reason it does not find lua
+)

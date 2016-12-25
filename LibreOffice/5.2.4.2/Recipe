@@ -6,7 +6,10 @@ file_size=182536912
 file_md5=6355e3750604370b51c77cdffb688275
 dir='libreoffice-5.2.4.2'
 recipe_type=configure
+autogen_before_configure=yes
 configure_options=(
-        "--with-ant-home=$goboPrograms/Apache-Ant/Current/"
-	"--with-junit=$goboPrograms/JUnit/Current/lib/junit.jar"
+	"--without-java"
+	"--disable-postgresql-sdbc"
+#	 "--with-ant-home=$goboPrograms/Apache-Ant/Current/"
+#       "--with-junit=$goboPrograms/JUnit/Current/lib/junit.jar"
 )

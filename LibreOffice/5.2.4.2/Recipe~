@@ -1,8 +1,0 @@
-# Recipe (MakeRecipe) for LibreOffice by Demian Florentin <demianflorentin@gmail.com>, on Thu Dec 22 13:36:55 PYST 2016
-# Recipe for version 5.2.4.2 by Demian Florentin <demianflorentin@gmail.com>, on Thu Dec 22 13:36:55 PYST 2016
-compile_version=016
-url="http://download.documentfoundation.org/libreoffice/src/5.2.4/libreoffice-5.2.4.2.tar.xz"
-file_size=182536912
-file_md5=6355e3750604370b51c77cdffb688275
-dir='libreoffice-5.2.4.2'
-recipe_type=configure

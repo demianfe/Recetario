@@ -24,11 +24,17 @@ do_build()
     $sudo_exec chown -R "$(whoami)" "$target"
     pushd src
     #bash ./all.bash 
-    ./make.bash
+    bash ./make.bash
     popd
     $sudo_exec chown -R "$(SuperUserName)" "$target"
 }
 do_install() {
    $sudo_exec mkdir -p "$target/lib/go"
    $sudo_exec cp -a pkg "$target/lib/go"
+   # The src directory is required in order to use this go version as boostrap to compile other go installations
+   $sudo_exec cp -a src "$target/lib/go"
+   # This is a little hack since the value at GOROOT_FINAL it's not picked by the ./make.bash script
+   # If you know how to correct this, you're encouraged to do so. Please, by all means.
+   $sudo_exec ln -s "$target/lib/go/src" "$target/src"
+   $sudo_exec ln -s "$target/lib/go/pkg" "$target/pkg"
 }

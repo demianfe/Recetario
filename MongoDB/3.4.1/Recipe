@@ -1,0 +1,13 @@
+# Recipe for version 3.4.1 by Demian Florentin <demianflorentin@gmail.com>, on Sat Dec 24 09:38:48 PYST 2016
+# Recipe (MakeRecipe) for MongoDB by Demian Florentin <demianflorentin@gmail.com>, on Fri Dec 23 18:46:03 PYST 2016
+compile_version=016
+url="https://fastdl.mongodb.org/src/mongodb-src-r3.4.1.tar.gz"
+file_size=40161375
+file_md5=87c59198dbe3aca7832378725e05fd91
+dir='mongodb-src-r3.4.1'
+recipe_type=scons
+
+override_default_options=yes
+scons_variables=(
+	"--prefix=$target"
+)

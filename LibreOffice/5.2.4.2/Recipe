@@ -9,7 +9,7 @@ recipe_type=configure
 autogen_before_configure=yes
 configure_options=(
 	"--without-java"
-	"--disable-postgresql-sdbc"
+	"--disable-firebird-sd"
 #	 "--with-ant-home=$goboPrograms/Apache-Ant/Current/"
 #       "--with-junit=$goboPrograms/JUnit/Current/lib/junit.jar"
 )

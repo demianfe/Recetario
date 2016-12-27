@@ -6,8 +6,8 @@ Just clone this repo and then use `GetRecipe` to put the recipes in your `/Data/
 like this for example (Replace `[RECIPE_NAME]` with the name of the recipe you want to compile):
 
 ```bash
-~$ https://github.com/demianfe/Recetario.git
-~$ GetRecipe Recipes/[RECIPE_NAME]
+~$ git clone https://github.com/demianfe/Recetario.git
+~$ GetRecipe Recetario/[RECIPE_NAME]
 ```
 
 *Have Fun*

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# This script burps the recipe detected in $1 into $goboData/Compile/LocalRecipes
+# The use of this script is just temporally since EditRecipe <path> its not working at this time
+
+if [ "x$1" == "x" ]; then
+  echo "usage: BurpRecipe <path-to-gobolinux-recipe>"
+  exit 1
+fi
+
+if [ ! -d "$1" ]; then
+  echo "The directory '$1' doesnt exist or it's not a directory"
+  exit 2
+fi
+
+if [ ! -f "$1/Recipe" ]; then
+  echo "No recipe found at '$1/Recipe'. Are you sure the path is correct?"
+  exit 3
+fi
+
+if [ "x$goboData" == "x" ]; then
+  echo "No 'goboData' variable found. Please se this variable to your data directory of your gobo installation"
+  exit 4
+fi
+
+pushd $1/..
+LOCAL_RECIPE_DIR=$goboData/Compile/LocalRecipes/$(basename $PWD)
+popd
+mkdir -p $LOCAL_RECIPE_DIR
+cp -ar $1 $LOCAL_RECIPE_DIR

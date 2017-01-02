@@ -1,0 +1,8 @@
+# Recipe (MakeRecipe) for BRLTTY by Pedro Flores <pdavidflores@gmail.com>, on Sat Dec 31 18:30:01 PYST 2016
+# Recipe for version 5.4 by Pedro Flores <pdavidflores@gmail.com>, on Sat Dec 31 18:30:01 PYST 2016
+compile_version=016
+url="http://mielke.cc/brltty/archive/brltty-5.4.tar.xz"
+file_size=3028752
+file_md5=cfedd365e6237d762ad8c35b4f6fb361
+dir='brltty-5.4'
+recipe_type=configure

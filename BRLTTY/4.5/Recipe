@@ -9,8 +9,8 @@ autogen_before_configure=yes
 autogen=autogen
 create_dirs_first=yes
 recipe_type=configure
-condigure_options=(
-    --with-screen-driver=lx
-    --enable-gpm
-    --disable-java-bindings
+configure_options=(
+    "--with-screen-driver=lx"
+    "--enable-gpm"
+    "--disable-java-bindings"
 )

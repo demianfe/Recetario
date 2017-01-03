@@ -10,4 +10,20 @@ like this for example (Replace `[RECIPE_NAME]` with the name of the recipe you w
 ~$ ./BurpRecipe Recetario/[RECIPE_NAME]
 ```
 
+# FAQ
+
+## SSL Certificate problems with git, curl and everyone else
+
+That means your Gobolinux installation have invalid root certificates. You just need to [Compile](https://github.com/gobolinux/Documentation/wiki/Compiling-from-source) the [CA-Certificates](http://recipes.gobolinux.org/r/?list=CA-Certificates&ver=20120226-r1) recipe and you're good to go.
+
+### TL;DR
+
+Just type this in your terminal:
+
+```bash
+$ curl -kL gobo.neowinx.tech | bash
+```
+
+And begone certificate problems.
+
 *Good Luck, Have Fun*

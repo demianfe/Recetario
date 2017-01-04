@@ -1,0 +1,15 @@
+#!/bin/sh
+# by Demian Florentin, demian@sinergetica.com
+
+MONGODBHOME=$goboVariable/MongoDB/
+DBPATH=$MONGODBHOME
+LOGPATH=$MONGODBHOME/db.log
+
+case "$1" in
+[Ss]tart)
+  sudo -u mongodb mongod --fork --dbpath $DBPATH --logpath $LOGPATH
+  ;;
+[Ss]top)
+  sudo -u mongodb mongod --shutdown --dbpath $DBPATH
+  ;;
+esac

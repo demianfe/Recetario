@@ -8,6 +8,29 @@ dir='mongodb-src-r3.4.1'
 recipe_type=scons
 
 override_default_options=yes
+
 scons_variables=(
 	"--prefix=$target"
+	"--use-system-boost=USE-SYSTEM-BOOST"
 )
+
+pre_install() {
+   if ! grep -q mongodb $goboSettings/group
+   then
+      Log_Normal "Adding group mongodb"
+      groupadd mongodb
+   fi
+
+   if ! grep -q "mongodb:x:" $goboSettings/passwd
+   then
+      Log_Normal "Adding user mongodb"
+      useradd mongodb -g mongodb -c 'Added by Compile for MongoDB' -d $target -s $goboExecutables/false
+   fi
+}
+
+post_install() {
+    Log_Normal "Initializing MongoDB directories"
+    DBPATH=$goboVariable/MongoDB
+    mkdir -p $DBPATH/data
+    chown mongodb:mongodb $DBPATH
+}

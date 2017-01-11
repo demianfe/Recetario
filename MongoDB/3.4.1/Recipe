@@ -6,12 +6,10 @@ file_size=40161375
 file_md5=87c59198dbe3aca7832378725e05fd91
 dir='mongodb-src-r3.4.1'
 recipe_type=scons
-
 override_default_options=yes
-
 scons_variables=(
-	"--prefix=$target"
-	"--use-system-boost=USE-SYSTEM-BOOST"
+  --prefix=$target
+  --use-system-boost=USE-SYSTEM-BOOST
 )
 
 pre_install() {
@@ -31,6 +29,6 @@ pre_install() {
 post_install() {
     Log_Normal "Initializing MongoDB directories"
     DBPATH=$goboVariable/MongoDB
-    mkdir -p $DBPATH/data
+    mkdir -p $DBPATH/db
     chown mongodb:mongodb $DBPATH
 }

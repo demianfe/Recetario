@@ -19,16 +19,14 @@ configure_options=(
     -opensource
     -confirm-license
     -optimized-qmake
-   # -no-phonon
-   # -no-phonon-backend
-   # -no-nas-sound
+    -no-gstreamer
 )
 
 #with_mysql="-plugin-sql-mysql"
 #with_sqlite=(-plugin-sql-sqlite -system-sqlite)
 #with_odbc="-plugin-sql-odbc"
 #with_nas="-system-nas-sound"
-#with_webkit="-webkit"
+with_webkit="-webkit"
 
 environment=(
    # Workaround to fix build error due to missing libQtCLucene.so

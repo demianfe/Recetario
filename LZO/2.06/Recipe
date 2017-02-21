@@ -1,0 +1,16 @@
+# Recipe for version 2.06-r1 by Pedro Flores <pdavidflores@gmail.com>, on Thu Jan 12 00:24:55 PYST 2017
+# Recipe (MakeRecipe) for LZO by Roko <ro.ko@mcnon.com>, on Thu Sep 30 21:46:16 BRT 2004
+compile_version=1.8.0
+url="http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz"
+file_size=583045
+file_md5=95380bd4081f85ef08c5209f4107e9f8
+recipe_type=configure
+
+environment=(
+    # As suggested in https://github.com/mxe/mxe/pull/1358 let's use gnu90 instead of c90 standard
+    CFLAGS="-std=gnu90"
+)
+
+configure_options=(
+    "--enable-shared=yes"
+)

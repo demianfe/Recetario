@@ -10,9 +10,12 @@ environment=(
     CXXFLAGS=
 )
 
+using_spice() {
+   configure_options=( "${configure_options[@]}" "--enable-spice" )
+}
+
 configure_options=(
     --enable-system
     --enable-linux-user
-    --enable-spice
     --enable-kvm
 )
